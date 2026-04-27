@@ -55,14 +55,18 @@ These models are trained in plaintext and do not perform functional-encryption e
 For comparison with the FE-compatible pipeline, we train/evaluate variants corresponding to split points 1--4 and the dimensionality-constrained architecture used by the proposed method.
 FE-Compatible ResNet-50은 평문으로 학습된 정보를 활용합니다.
 
+```bash
 [Split, 평문 모델의 학습 명령어]
 # python ~~~.py ~~~~~~
+```
 Here, x specifies the split position, where x ∈ {1,2,3,4}.
 
 ### 3.2 Evaluation
 
+```bash
 [Split, 평문 모델의 추론 명령어]
 # python ~~~.py ~~~~~~
+```
 Here, x specifies the split position, where x ∈ {1,2,3,4}.
 
 
@@ -70,8 +74,10 @@ Here, x specifies the split position, where x ∈ {1,2,3,4}.
 
 The FE-compatible inference pipeline includes integer-domain encoding, cryptographic encryption/decryption operations, and stage-wise execution of the proposed architecture.
 
+```bash
 [Split 함수암호 모델의 추론 명령어]
 # python ~~~.py ~~~~~~
+```
 Here, x specifies the split position, where x ∈ {1,2,3,4}.
 
 
