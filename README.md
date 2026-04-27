@@ -16,16 +16,16 @@ This repository is provided for **academic research and reproducibility purposes
 
 ### Environment
 
-1) Python 환경을 구축하고 필요한 라이브러리를 설치합니다.
+1) Set up the Python environment and install the necessary libraries.
 ```bash
 # conda create -n fe_inference python=[x.xx]
 # conda activate fe_inference
 # [pytorch 등 필요한 라이브러리 설치 방법]
 ```
 
-2) FE 관련 C파일을 컴파일해야 합니다.
-makefile에 본인의 GPU에 맞는 sm_xx를 입력합니다.
+2) You need to compile the FE-related C files. Enter the sm_xx corresponding to your GPU into the makefile.
 ```bash
+[makefile 어느 변수 고치는지, 어떻게 컴파일 하는지]
 # cd fe/
 # make
 ```
@@ -34,15 +34,13 @@ makefile에 본인의 GPU에 맞는 sm_xx를 입력합니다.
 ## 2. Data Preparation
 
 This repository does **not** redistribute raw datasets.
-
 The experiments use publicly available benchmark datasets:
 
 - CIFAR-10
 - Tiny-ImageNet
 
 Users should download the datasets from their official sources and comply with the original dataset licenses, citation requirements, and terms of use.
-
-다운로드한 데이터세트의 경로가 py 파일 내 경로와 동일한지 확인하세요
+Please check if the path of the downloaded dataset is the same as the path in the .py file.
 
 
 ## 3. Reproducing the Main Experiments
@@ -53,7 +51,7 @@ This section provides the commands for reproducing the main experimental results
 
 These models are trained in plaintext and do not perform functional-encryption execution during training. 
 For comparison with the FE-compatible pipeline, we train/evaluate variants corresponding to split points 1--4 and the dimensionality-constrained architecture used by the proposed method.
-FE-Compatible ResNet-50은 평문으로 학습된 정보를 활용합니다.
+FE-Compatible ResNet-50 utilizes information learned from plaintext.
 
 ```bash
 [Split, 평문 모델의 학습 명령어]
