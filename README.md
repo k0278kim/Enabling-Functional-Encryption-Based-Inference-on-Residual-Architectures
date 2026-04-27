@@ -21,12 +21,14 @@ This repository is provided for **academic research and reproducibility purposes
 # conda create -n fe_inference python=[x.xx]
 # conda activate fe_inference
 # [pytorch 등 필요한 라이브러리 설치 방법]
+```
 
 2) FE 관련 C파일을 컴파일해야 합니다.
-```bash
 makefile에 본인의 GPU에 맞는 sm_xx를 입력합니다.
+```bash
 # cd fe/
 # make
+```
 
 
 ## 2. Data Preparation
